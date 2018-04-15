@@ -6,19 +6,18 @@ const ObjectId = Schema.ObjectId
 let userSchema = new Schema({
   email: String,
   password: String
-}) 
+})
 
 let wineSchema = new Schema({
   color: String,
-  label: String,
-  producer: String,
-  url: String,
-  style: String,
-  Description: String,
-  Region: String,
   year: Number,
-  Inventory: Number,
-  user: { type: Schema.ObjectId, ref: 'User'}
+  producer: String,
+  varietal: String,
+  region: String,
+  url: String,
+  description: String,
+  inventory: Number,
+  user: { type: Schema.ObjectId, ref: 'User' }
 })
 
 let User = mongoose.model('User', userSchema)

@@ -1,0 +1,20 @@
+<nav class="whites">
+  <a href="/wines">
+    <img class="cellarSmall" src='/assets/images/Cellar_logo_white.svg' alt='logo'>
+  </a>
+  <div class="user">
+    {{#if currentUser}}
+    <a href="/logout">Logout {{currentUser.local.email}}</a>
+    {{else}}
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+    {{/if}}
+  </div>
+</nav>
+
+
+ {{#each wines}}
+
+  <a class="list" href="/wines/{{this.id}}">{{this.color}}{{this.producer}}</a>
+       
+  {{/each}}

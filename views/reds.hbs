@@ -1,0 +1,41 @@
+<nav class="reds">
+  <a href="/wines">
+    <img class="cellarSmall" src='/assets/images/Cellar_logo_white.svg' alt='logo'>
+  </a>
+  <div class="user">
+    {{#if currentUser}}
+    <a href="/logout">Logout {{currentUser.local.email}}</a>
+    {{else}}
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+    {{/if}}
+  </div>
+</nav>
+
+
+<div class="listHeader">
+<img class="grapeLogo" src='/assets/images/RedsLogo.svg' alt='reds' />
+
+</div>
+
+
+<table>
+  <thead>
+    <th>Year</th>
+    <th>Producer</th>
+    <th>Varietal</th>
+    <th>Inventory</th>
+  </thead>
+
+<tbody>
+  {{#each wines}}
+    <tr>
+      <td>{{this.year}}</td> 
+      <td><a class="list" href="/wines/reds/{{this.id}}">{{this.producer}}</a></td>
+      <td>{{this.varietal}}</td>
+      <td>{{this.inventory}}</td>   
+    </tr>       
+  {{/each}}
+</tbody>
+
+</table>

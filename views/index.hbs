@@ -1,0 +1,15 @@
+<nav>
+  <div class="user">
+    {{#if currentUser}}
+    <a href="/logout">Logout {{currentUser.local.email}}</a>
+    {{else}}
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+    {{/if}}
+  </div>
+</nav>
+
+<div class="hero">
+<img class="logo" src='assets/images/Cellar_Logo.svg' alt='logo'/>
+<img class="rack" src='assets/images/Rack.svg' alt='rack' />
+</div>

@@ -13,18 +13,21 @@ let userSchema = new Schema({
 
 let wineSchema = new Schema({
   color: String,
-  label: String,
-  producer: String,
-  url: String,
-  style: String,
-  Description: String
-  Region: String,
   year: Number,
+  producer: String,
+  varietal: String,
+  Region: String,
+  url: String,
+  Description: String,
   Inventory: Number,
   user: { type: Schema.ObjectId, ref: 'User'}
 })
 
 let User = mongoose.model('User', userSchema)
 let Wine = mongoose.model('Wine', wineSchema)
+```
 
 
+Need to filter Wine collection by red, white or other
+Need routes to those filtered lists
+Need a table template to display the lists
