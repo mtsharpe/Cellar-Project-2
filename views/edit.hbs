@@ -1,3 +1,17 @@
+<nav class="reds">
+  <a href="/wines">
+    <img class="cellarSmall" src='/assets/images/Cellar_logo_white.svg' alt='logo'>
+  </a>
+  <div class="user">
+    {{#if currentUser}}
+    <a href="/logout">Logout {{currentUser.local.email}}</a>
+    {{else}}
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+    {{/if}}
+  </div>
+</nav>
+
 <h2>Edit Wine</h2>
 
 <form class="forms" action="/wines/{{wine.id}}?_method=put" method="post">
@@ -15,7 +29,7 @@
     <label>Website:</label><br>
     <input type="text" name="url" value="{{ wine.url }}" /><br>
     <label>Inventory:</label><br>
-    <input type="number" name="capacity" value="{{ wine.inventory }}"/><br>
+    <input type="number" name="inventory" value="{{ wine.inventory }}"/><br>
     <label>Notes/Pairing information:</label><br>
     <input type="text" name="description" value="{{ wine.description }}"/><br>
     

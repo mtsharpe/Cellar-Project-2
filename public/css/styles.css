@@ -56,9 +56,41 @@ nav {
   margin: 0 auto;
 }
 
+.backRed {
+  opacity: 1;
+  margin-top: -220px;
+  float: left
+}
+/* 
+.backRed:hover {
+  opacity: 1;
+} */
+
+.backWhite {
+  opacity: 0;
+  margin-top: -190px;
+  float: left;
+}
+
+.backWhite:hover {
+  opacity: 1;
+}
+
+.backOther {
+  opacity: 0;
+  margin-top: -190px;
+  float: left;
+}
+
+.backOther:hover {
+  opacity: 1;
+}
+
+
 .list {
   text-decoration: none;
   display: block;
+  color: black;
 }
 
 .listHeader {

@@ -34,8 +34,8 @@ router.get('/edit/:id', (req, res) => {
     })
 })
 
-router.put('/:wineType/:id', (req, res) => {
-  Wine.findOneAndUpdate({ _id: req.params.id }.req.body, { new: true })
+router.put('/:id', (req, res) => {
+  Wine.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
     .then(wine => {
       res.redirect('/')
     })
