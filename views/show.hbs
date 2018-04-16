@@ -1,0 +1,14 @@
+<h2>{{ wine.year }}</h2>
+<h2>{{ wine.producer }}</h2>
+<h2>{{ wine.varietal }}</h2>
+
+<h3>Region: {{ wine.region }}</h3>
+<h3>Website: <a href="{{ wine.url }}">{{wine.producer}}</a></h3>
+<h3>Inventory: {{ wine.inventory }}</h3>
+<h3>Notes/Pairing information:</h3>
+<h4>{{ wine.description }}</h4>
+
+<a class="forms edit" href="/wines/edit/{{wine.id}}">Edit</a>
+
+
+</form>   

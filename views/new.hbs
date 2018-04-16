@@ -1,0 +1,20 @@
+<h2>Add a Wine</h2>
+
+<form class="forms" action="/wines" method="post" accept-charset="utf-8">
+  <p>
+    <label>Producer:</label><br>   
+    <input type="text" name="producer" value="{{ wine.producer }}" /><br>
+    <label>Color:</label><br>   
+    <input type="text" name="color" value="{{ wine.color }}" /><br>
+    <label>Varietal:</label><br>
+    <input type="text" name="varietal" value="{{ wine.varietal }}" /><br>
+    <label>Year:</label><br>
+    <input type="number" name="year" value="{{ wine.year }}" /><br>
+    <label>Inventory:</label><br>
+    <input type="number" name="capacity" value="{{ wine.inventory }}"/><br>
+    <label>Notes/Pairing information:</label><br>
+    <input type="text" name="description" value="{{ wine.description }}"/><br>
+    
+    <input class="edit" type="submit" value="Submit">
+  </p>
+</form>
