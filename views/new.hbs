@@ -16,19 +16,22 @@
 
 <form class="forms" action="/wines" method="post" accept-charset="utf-8">
   <p>
-    <label>Producer:</label><br>   
-    <input type="text" name="producer" value="{{ wine.producer }}" /><br>
-    <label>Color:</label><br>   
-    <input type="text" name="color" value="{{ wine.color }}" /><br>
-    <label>Varietal:</label><br>
-    <input type="text" name="varietal" value="{{ wine.varietal }}" /><br>
-    <label>Year:</label><br>
+    <label>Producer:</label>
+    <input type="text" name="producer" size="50" value="{{ wine.producer }}" /><br>
+    <label>Color:</label>   
+    <input type="text" name="color" size="50" value="{{ wine.color }}" /><br>
+    <label>Varietal:</label>
+    <input type="text" name="varietal" size="50" value="{{ wine.varietal }}" /><br>
+    <label>Region:</label>
+    <input type="text" name="region" size="50" value="{{ wine.region }}" /><br>
+    <label>Website:</label>
+    <input type="text" name="url" size="50" value="{{ wine.url }}" /><br>
+    <label>Year:</label>
     <input type="number" name="year" value="{{ wine.year }}" /><br>
-    <label>Inventory:</label><br>
+    <label>Inventory:</label>
     <input type="number" name="capacity" value="{{ wine.inventory }}"/><br>
-    <label>Notes/Pairing information:</label><br>
-    <input type="text" name="description" value="{{ wine.description }}"/><br>
-    
+    <label>Notes/Pairing information:</label>
+    <textarea type="text" name="description" rows="5" cols="50" value="{{ wine.description }}"></textarea><br>
     <input class="edit" type="submit" value="Submit">
   </p>
 </form>

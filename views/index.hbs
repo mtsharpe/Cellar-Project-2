@@ -1,5 +1,5 @@
 <nav>
-  <div class="user">
+  <div class="main">
     {{#if currentUser}}
     <a href="/logout">Logout {{currentUser.local.email}}</a>
     {{else}}
@@ -11,11 +11,23 @@
 
 <div class="hero">
 <img class="logo" src='assets/images/Cellar_Logo.svg' alt='logo'/>
+<h2 class="subhed">— because wine tastes better when it's organized —</h2>
 </div>
 <div>
 <img class="rack" src='assets/images/Rack.svg' alt='rack' />
-</div>
-  <div><a href="/wines/reds"><img class="rack backRed" src='assets/images/RackNavRed.svg' alt='link'/></a></div>
-  <div><a href="/wines/whites"><img class="rack backWhite" src='assets/images/RackNavWhite.svg' alt='link'/></a></div>
-  <div><a href="/wines/others"><img class="rack backOther" src='assets/images/RackNavOther.svg' alt='link'/></a></div>
+<img class="rack back" src='assets/images/RackNav.svg' alt='rack' />
 
+</div>
+  
+  {{!-- <div class="container">
+    <a href="/wines/reds"><img class=" backRed" src='assets/images/RackNavRed.svg' alt='link'/></a>
+    <a href="/wines/whites"><img class="backWhite" src='assets/images/RackNavWhite.svg' alt='link'/></a>
+    <a href="/wines/others"><img class="backOther" src='assets/images/RackNavOther.svg' alt='link'/></a>
+  </div> --}}
+
+
+  <div class="mainlink">
+    <a class="mainlink" href="/wines/reds">Reds</a>
+    <a class="mainlink" href="/wines/whites">Whites</a>
+    <a class="mainlink" href="/wines/others">Other</a>
+  </div>

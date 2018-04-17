@@ -1,4 +1,4 @@
-v<nav class="reds">
+<nav class="reds">
   <a href="/wines">
     <img class="cellarSmall" src='/assets/images/Cellar_logo_white.svg' alt='logo'>
   </a>
@@ -12,14 +12,14 @@ v<nav class="reds">
   </div>
 </nav>
 
+<div>
 
-
-<h2>{{ wine.year }}</h2>
-<h2>{{ wine.producer }}</h2>
-<h2>{{ wine.varietal }}</h2>
+<h2>{{ wine.year }}
+{{ wine.producer }}<br>
+{{ wine.varietal }}</h2>
 
 <h3>Region: {{ wine.region }}</h3>
-<h3>Website: <a href="{{ wine.url }}">{{wine.producer}}</a></h3>
+<h3>Website: <a href="{{ wine.url }}">{{wine.url}}</a></h3>
 <h3>Inventory: {{ wine.inventory }}</h3>
 <h3>Notes/Pairing information:</h3>
 <h4>{{ wine.description }}</h4>
@@ -28,3 +28,5 @@ v<nav class="reds">
 
 
 </form>   
+
+</div>

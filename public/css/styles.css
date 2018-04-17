@@ -12,6 +12,17 @@ nav {
   padding: 10px 20px;
 }
 
+h2 {
+  font-size: 40px;
+  line-height: 45px;
+}
+
+h2, h3, h4 {
+  color: #4c0118;
+  font-weight: 800;
+  text-align: center;
+}
+
 .others {
   background: #f8aba5;
 }
@@ -22,20 +33,38 @@ nav {
 
 .cellarSmall {
   width: 160px;
-  float: left;
   margin: -10px 0 0 20%;
+}
+
+.main {
+  text-align: right;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.main > a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  font-size: 20px;
 }
 
 .user {
   text-align: right;
-  margin-top: 20px;
   width: 80%;
+  margin-top: -60px;
 }
+
 .user > a {
-  color: #edc98e;
+  color: white;
   text-decoration: none;
   padding: 6px 12px;
   font-size: 20px;
+}
+
+.subhed {
+  margin-top: -10px;
+  font-size: 30px;
 }
 
 .hero {
@@ -51,46 +80,26 @@ nav {
 }
 
 .rack {
-  width: 80%;
+  width: 40%;
   display: block;
   margin: 0 auto;
 }
 
-.backRed {
-  opacity: 1;
-  margin-top: -220px;
-  float: left
-}
-/* 
-.backRed:hover {
-  opacity: 1;
-} */
-
-.backWhite {
-  opacity: 0;
+.back {
   margin-top: -190px;
-  float: left;
-}
-
-.backWhite:hover {
-  opacity: 1;
-}
-
-.backOther {
+  position: relative;
   opacity: 0;
-  margin-top: -190px;
-  float: left;
 }
 
-.backOther:hover {
+.back:hover {
   opacity: 1;
-}
-
+} 
 
 .list {
   text-decoration: none;
   display: block;
   color: black;
+  font-weight: 800;
 }
 
 .listHeader {
@@ -116,3 +125,89 @@ tr:nth-child(odd) {
   background: rgba(237, 201, 142, 0.3)
 }
 
+.add {
+  width: 80%;
+  text-decoration: none;
+  text-align: center;
+  display: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-size: 20px;
+  color: #4c0118;
+  text-transform: uppercase;
+}
+
+.forms {
+  text-align: center;
+}
+
+.edit {
+  color: #4c0118;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  display: block;
+}
+
+label {
+  padding-top: 12px;
+  display: block;
+}
+
+input, textarea {
+  margin-top: 8px;
+}
+
+
+.mainlink {
+  text-decoration: none;
+  color: #edc98e;
+  font-size: 16px;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0px 43px 0 51px;
+}
+
+/*
+.back {
+  margin-top: -284px;
+  position: relative;
+  opacity: 0;
+}
+
+.back:hover {
+  opacity: 1;
+} 
+
+.backRed {
+  opacity: 0;
+  position: relative;
+  margin-top: -20px; 
+  width: 80%;
+
+}
+
+.backRed:hover {
+  opacity: 1;
+}
+
+.backWhite {
+  opacity: 0;
+  position: relative;
+  margin-top: -284px;
+}
+
+.backWhite:hover {
+  opacity: 1;
+}
+
+.backOther {
+  opacity: 0;
+  position: relative;
+  margin-top: -284px;
+}
+
+.backOther:hover {
+  opacity: 1;
+} */
