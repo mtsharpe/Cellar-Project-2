@@ -8,18 +8,6 @@ router.get('/', (req, res) => {
   Wine.find({}).then(wines => res.render('index', { wines }))
 })
 
-// router.get('/reds', (req, res) => {
-//   Wine.find({ 'color': 'red' })
-//     .then(wines => res.render('reds', { wines }))
-// })
-
-// router.get('/whites', (req, res) => {
-//   Wine.find({ 'color': 'white' })
-//     .then(wines => res.render('whites', { wines }))
-// })
-
-
-
 router.post('/', (req, res) => {
   Wine.create(req.body)
     .then(wine => {

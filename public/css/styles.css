@@ -85,8 +85,25 @@ h2, h3, h4 {
   margin: 0 auto;
 }
 
+.redLink {
+  width: 22%;
+  margin-top: -5.9%;
+  margin-left: 31.5%;
+}
+
+.whiteLink {
+  width: 22%;
+  margin-top: -4.1%;
+  margin-left: 39.2%;
+}
+
+.otherLink {
+  width: 22%;
+  margin-top: -4.29%;
+  margin-left: 46.9%;
+}
+
 .back {
-  margin-top: -190px;
   position: relative;
   opacity: 0;
 }
@@ -152,13 +169,14 @@ tr:nth-child(odd) {
 label {
   padding-top: 12px;
   display: block;
+  color: #ffffff;
 }
 
 input, textarea {
   margin-top: 8px;
 }
 
-
+/* 
 .mainlink {
   text-decoration: none;
   color: #edc98e;
@@ -167,7 +185,7 @@ input, textarea {
   text-transform: uppercase;
   text-align: center;
   margin: 0px 43px 0 51px;
-}
+} */
 
 /*
 .back {

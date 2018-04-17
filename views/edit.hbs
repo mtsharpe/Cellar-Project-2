@@ -1,3 +1,5 @@
+<body style="background-color:#a50e37">
+
 <nav class="reds">
   <a href="/wines">
     <img class="cellarSmall" src='/assets/images/Cellar_logo_white.svg' alt='logo'>
@@ -12,7 +14,9 @@
   </div>
 </nav>
 
-<h2>Edit Wine</h2>
+<div class="listHeader">
+  <img class="grapeLogo" src='/assets/images/EditWine.svg' alt='edit' />
+</div>
 
 <form class="forms" action="/wines/{{wine.id}}?_method=put" method="post">
   <p>
@@ -40,3 +44,5 @@
 <form class="forms" action="/wines/{{ wine.id }}?_method=delete" method="post">
   <input class="edit" type="submit" value="Delete">
 </form>
+
+</body>
