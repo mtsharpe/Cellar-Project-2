@@ -44,8 +44,6 @@ app.use(function (req, res, next) {
 
 const S3_BUCKET = process.env.S3_BUCKET
 
-// app.get('/', (req, res) => res.render('show'))
-
 app.get('/sign-s3', (req, res) => {
   const s3 = new aws.S3()
   const fileName = req.query['file-name']
@@ -74,8 +72,6 @@ app.get('/sign-s3', (req, res) => {
     console.log('file-type')
   })
 })
-
-
 
 app.use('/', usersController)
 app.use('/wines', winesController)

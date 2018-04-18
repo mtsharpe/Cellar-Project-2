@@ -16,7 +16,7 @@
 
 <div class="bottle">
   {{#unless wine.image }}
-  <img id="preview" src="/assets/images/Red_bottle.svg">
+    <img id="preview" src="/assets/images/Red_bottle.svg">
   {{else}}
     <img id="preview" src="{{wine.image}}">
   {{/unless}}
@@ -25,7 +25,7 @@
   <form method="POST" action="/wines/{{wine.id}}/save-image?_method=put" method="post">
       <input type="hidden" id="wine-url" name="wine-url" value="/assets/images/Red_bottle.svg">
       <input type="submit" value="Update photo">
-    </form>
+  </form>
 </div>
 
 <div>

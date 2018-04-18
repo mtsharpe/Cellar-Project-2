@@ -32,7 +32,7 @@ router.put('/:id/save-image', (req, res) => {
 router.put('/:id', (req, res) => {
   Wine.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
     .then(wine => {
-      res.redirect('/')
+      res.redirect(`/wines/${wine.color}/${wine._id}`)
     })
 })
 
