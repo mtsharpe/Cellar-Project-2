@@ -8,6 +8,7 @@ const methodOverride = require('method-override')
 // const morgan = require('morgan')
 const passport = require('passport')
 const passportConfig = require('./config/passport')
+require('dotenv').config()
 
 const aws = require('aws-sdk')
 
@@ -49,6 +50,7 @@ app.get('/sign-s3', (req, res) => {
   const s3 = new aws.S3()
   const fileName = req.query['file-name']
   const fileType = req.query['file-type']
+  console.log('hi')
   const s3Params = {
     Bucket: S3_BUCKET,
     Key: fileName,
@@ -73,9 +75,7 @@ app.get('/sign-s3', (req, res) => {
   })
 })
 
-app.post('/', (req, res) => {
 
-})
 
 app.use('/', usersController)
 app.use('/wines', winesController)

@@ -22,6 +22,13 @@ router.get('/edit/:id', (req, res) => {
     })
 })
 
+router.put('/:id/save-image', (req, res) => {
+  Wine.findOneAndUpdate({ _id: req.params.id }, {'$set': {'image': req.body['wine-url']}})
+    .then(wine => {
+      res.redirect(`/wines/${wine.color}/${wine._id}`)
+    })
+})
+
 router.put('/:id', (req, res) => {
   Wine.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
     .then(wine => {

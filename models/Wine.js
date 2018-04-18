@@ -18,6 +18,7 @@ let wineSchema = new Schema({
   url: String,
   description: String,
   inventory: Number,
+  image: String,
   user: { type: Schema.ObjectId, ref: 'User' }
 })
 

@@ -1,6 +1,6 @@
 <nav class="reds">
   <a href="/wines">
-    <img class="cellarSmall" src='/assets/images/Cellar_logo_white.svg' alt='logo'>
+    <img class="cellarSmall" src='/assets/images/Cellar_Logo_white.svg' alt='logo'>
   </a>
   <div class="user">
     {{#if currentUser}}
@@ -12,10 +12,14 @@
   </div>
 </nav>
 <div class="bottle">
+  {{#unless wine.image }}
   <img id="preview" src="/assets/images/Red_bottle.svg">
+  {{else}}
+    <img id="preview" src="{{wine.image}}">
+  {{/unless}}
   <label id="status">Add your own photo</label> 
   <input type="file" id="file-input">
-  <form method="POST" action="/wines/{{wine.id}}?_method=put" method="post">
+  <form method="POST" action="/wines/{{wine.id}}/save-image?_method=put" method="post">
       <input type="hidden" id="wine-url" name="wine-url" value="/assets/images/Red_bottle.svg">
       <input type="submit" value="Update photo">
     </form>
@@ -39,6 +43,7 @@
   document.getElementById("file-input").onchange = () => {
     const files = document.getElementById('file-input').files;
     const file = files[0];
+    console.log(file)
     if(file == null){
       return alert('No file selected.');
     }
