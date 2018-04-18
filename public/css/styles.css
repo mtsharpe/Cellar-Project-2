@@ -210,3 +210,8 @@ input, textarea {
   background: #a50e37;
   color: #a50e37;
 }
+
+.showWine {
+  width: 80%;
+  margin: 0 auto;
+}

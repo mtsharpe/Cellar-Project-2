@@ -11,6 +11,9 @@
     {{/if}}
   </div>
 </nav>
+
+<section class="showWine">
+
 <div class="bottle">
   {{#unless wine.image }}
   <img id="preview" src="/assets/images/Red_bottle.svg">
@@ -37,6 +40,7 @@
   <a class="show" href="/wines/edit/{{wine.id}}">Edit</a>
 </div>
 
+</section>
 {{!-- This code is tweaked from a Heroku S3 tutorial --}}
 <script>
   (() => {
