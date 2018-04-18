@@ -1,4 +1,3 @@
-
 body {
   width: 100%;
   height: 100vh;
@@ -12,6 +11,12 @@ nav {
   padding: 10px 20px;
 }
 
+h1 {
+  font-size: 40px;
+  color: #4c0118;
+  text-align: center;
+}
+
 h2 {
   font-size: 40px;
   line-height: 45px;
@@ -20,6 +25,11 @@ h2 {
 h2, h3, h4 {
   color: #4c0118;
   font-weight: 800;
+  text-align: left;
+}
+
+.login {
+  color: white;
   text-align: center;
 }
 
@@ -125,6 +135,13 @@ h2, h3, h4 {
   margin: 0 auto;
 }
 
+.bottle {
+  float: left;
+  margin-left: 30%;
+  padding-right: 40px;
+  width: 10%;
+}
+
 table {
   width: 60%;
   margin: 0 auto;
@@ -166,66 +183,30 @@ tr:nth-child(odd) {
   display: block;
 }
 
+.show {
+  text-align: left;
+}
+
 label {
   padding-top: 12px;
   display: block;
   color: #ffffff;
 }
 
+#status {
+  color: #4c0118;
+}
+
 input, textarea {
   margin-top: 8px;
 }
 
-/* 
-.mainlink {
-  text-decoration: none;
-  color: #edc98e;
-  font-size: 16px;
-  position: relative;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0px 43px 0 51px;
-} */
-
-/*
-.back {
-  margin-top: -284px;
-  position: relative;
-  opacity: 0;
+.wineList {
+  margin-bottom: 20px;
 }
-
-.back:hover {
-  opacity: 1;
-} 
-
-.backRed {
-  opacity: 0;
-  position: relative;
-  margin-top: -20px; 
-  width: 80%;
-
+.footer {
+  margin-top: 40px;
+  height: 30px;
+  background: #a50e37;
+  color: #a50e37;
 }
-
-.backRed:hover {
-  opacity: 1;
-}
-
-.backWhite {
-  opacity: 0;
-  position: relative;
-  margin-top: -284px;
-}
-
-.backWhite:hover {
-  opacity: 1;
-}
-
-.backOther {
-  opacity: 0;
-  position: relative;
-  margin-top: -284px;
-}
-
-.backOther:hover {
-  opacity: 1;
-} */

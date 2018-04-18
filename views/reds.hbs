@@ -12,17 +12,15 @@
   </div>
 </nav>
 
-
 <div class="listHeader">
-<img class="grapeLogo" src='/assets/images/RedsLogo.svg' alt='reds' />
-
+  <img src='/assets/images/RedsLogo.svg' alt='reds' />
 </div>
+
 <div class="add">
   <a class="add" href="/wines/new">Add a wine</a>
 </div>
-{{!-- <a class="add" href="/wines/sorted/reds/alphabetical">Alphabetical sort</a> --}}
 
-<table>
+<table class=""wineList>
   <thead>
     <th>Year</th>
     <th>Producer</th>
@@ -30,17 +28,16 @@
     <th>Inventory</th>
   </thead>
 
-<tbody>
-  {{#each wines}}
-    <tr>
-      <td>{{this.year}}</td> 
-      <td><a class="list" href="/wines/reds/{{this.id}}">{{this.producer}}</a></td>
-      <td>{{this.varietal}}</td>
-      <td>{{this.inventory}}</td>   
-    </tr>       
-  {{/each}}
-</tbody>
-
+  <tbody>
+    {{#each wines}}
+      <tr>
+        <td>{{this.year}}</td> 
+        <td><a class="list" href="/wines/reds/{{this.id}}">{{this.producer}}</a></td>
+        <td>{{this.varietal}}</td>
+        <td>{{this.inventory}}</td>   
+      </tr>       
+    {{/each}}
+  </tbody>
 </table>
 
-
+<footer class="footer red">""</footer>

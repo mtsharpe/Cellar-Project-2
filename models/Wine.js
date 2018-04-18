@@ -1,4 +1,5 @@
 const mongoose = require('../db/connection')
+const bcrypt = require('bcrypt-nodejs')
 
 const Schema = mongoose.Schema
 const ObjectId = Schema.ObjectId
@@ -19,6 +20,14 @@ let wineSchema = new Schema({
   inventory: Number,
   user: { type: Schema.ObjectId, ref: 'User' }
 })
+
+userSchema.methods.encrypt = function (password) {
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(8))
+}
+
+userSchema.methods.validPassword = function (password) {
+  return bcrypt.compareSync(password, this.password)
+}
 
 let User = mongoose.model('User', userSchema)
 let Wine = mongoose.model('Wine', wineSchema)

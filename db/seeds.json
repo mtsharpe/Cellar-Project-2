@@ -427,6 +427,28 @@
     "description":"Add your own notes here",
     "inventory":1,
     "user":{ "type": "Schema.ObjectId", "ref": "User" }
+  },
+  {
+    "color":"other",
+    "year":2015,
+    "producer":"Ruffino",
+    "varietal":"Prosecco",
+    "region":"Prosecco, Italy",
+    "url":"https://www.ruffino.com/us/our-wines/prosecco",
+    "description":"Add your own notes here",
+    "inventory":1,
+    "user":{ "type": "Schema.ObjectId", "ref": "User" }
+  },
+  {
+    "color":"other",
+    "year":2010,
+    "producer":"Gruet",
+    "varietal":"Grand Rose",
+    "region":"New Mexico",
+    "url":"https://gruetwinery.com/",
+    "description":"Add your own notes here",
+    "inventory":1,
+    "user":{ "type": "Schema.ObjectId", "ref": "User" }
   }
 ]
 

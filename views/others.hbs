@@ -1,3 +1,5 @@
+<body>
+  
 <nav class="others">
   <a href="/wines">
     <img class="cellarSmall" src='/assets/images/Cellar_logo_white.svg' alt='logo'>
@@ -12,15 +14,13 @@
   </div>
 </nav>
 
-
 <div class="listHeader">
-<img class="grapeLogo" src='/assets/images/OthersLogo.svg' alt='whites' />
+  <img class="grapeLogo" src='/assets/images/OthersLogo.svg' alt='whites' />
+</div>
 
-</div>
 <div class="add">
-<a class="add" href="/wines/new">Add a wine</a>
+  <a class="add" href="/wines/new">Add a wine</a>
 </div>
-{{!-- <a class="add" href="/wines/sorted/reds/alphabetical">Alphabetical sort</a> --}}
 
 <table>
   <thead>
@@ -30,15 +30,16 @@
     <th>Inventory</th>
   </thead>
 
-<tbody>
-  {{#each wines}}
-    <tr>
-      <td>{{this.year}}</td> 
-      <td><a class="list" href="/wines/whites/{{this.id}}">{{this.producer}}</a></td>
-      <td>{{this.varietal}}</td>
-      <td>{{this.inventory}}</td>   
-    </tr>       
-  {{/each}}
-</tbody>
-
+  <tbody>
+    {{#each wines}}
+      <tr>
+        <td>{{this.year}}</td> 
+        <td><a class="list" href="/wines/whites/{{this.id}}">{{this.producer}}</a></td>
+        <td>{{this.varietal}}</td>
+        <td>{{this.inventory}}</td>   
+      </tr>       
+    {{/each}}
+  </tbody>
 </table>
+
+</body>

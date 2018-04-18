@@ -15,12 +15,12 @@
 </nav>
 
 <div class="listHeader">
-  <img class="grapeLogo" src='/assets/images/EditWine.svg' alt='edit' />
+  <img src='/assets/images/EditWine.svg' alt='edit' />
 </div>
 
 <form class="forms" action="/wines/{{wine.id}}?_method=put" method="post">
   <p>
-     <label>Inventory:</label>
+    <label>Inventory:</label>
     <input type="number" name="inventory" value="{{ wine.inventory }}"/><br>
     <label>Year:</label>
     <input type="number" name="year" value="{{ wine.year }}" /><br>
@@ -36,8 +36,7 @@
     <input type="text" name="url" size="50" value="{{ wine.url }}" /><br>
     <label>Notes/Pairing information:</label><br>
     <textarea type="text" name="description" rows="5" cols="50" value="{{ wine.description }}"></textarea><br>
-    
-    <input class="edit" type="submit" value="Update">
+     <input class="edit" type="submit" value="Update">
   </p>
 </form>
 
