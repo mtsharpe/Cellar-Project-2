@@ -137,9 +137,9 @@ h2, h3, h4 {
 
 .bottle {
   float: left;
-  margin-left: 30%;
+  margin-top: 10px;
   padding-right: 40px;
-  width: 10%;
+  width: 100px;
 }
 
 table {
