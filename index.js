@@ -5,7 +5,7 @@ const parser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const flash = require('connect-flash')
 const methodOverride = require('method-override')
-const morgan = require('morgan')
+// const morgan = require('morgan')
 const passport = require('passport')
 const passportConfig = require('./config/passport')
 
@@ -13,7 +13,7 @@ const aws = require('aws-sdk')
 
 const app = express()
 
-app.use(morgan('dev'))
+// app.use(morgan('dev'))
 app.use(cookieParser())
 app.use(session({ secret: 'Wine' }))
 app.use(flash())
