@@ -29,7 +29,7 @@ app.use(methodOverride('_method'))
 app.engine('html', require('ejs').renderFile)
 aws.config.region = 'us-east-2'
 
-const usersController = require('./controllers/users')
+// const usersController = require('./controllers/users')
 const winesController = require('./controllers/wines')
 
 app.set('view engine', 'hbs')
@@ -73,7 +73,7 @@ app.get('/sign-s3', (req, res) => {
   })
 })
 
-app.use('/', usersController)
+// app.use('/', usersController)
 app.use('/wines', winesController)
 app.set('port', process.env.PORT || 3000)
 
