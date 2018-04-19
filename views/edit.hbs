@@ -32,7 +32,7 @@
     <label>Website:</label>
     <input type="text" name="url" size="50" value="{{ wine.url }}" /><br>
     <label>Notes/Pairing information:</label><br>
-    <textarea type="text" name="description" rows="5" cols="50" value="{{ wine.description }}"></textarea><br>
+    <textarea type="text" name="description" rows="5" cols="50">{{ wine.description }}</textarea><br>
      <input class="edit" type="submit" value="Update">
   </p>
 </form>
