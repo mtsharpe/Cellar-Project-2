@@ -3,9 +3,10 @@ const router = express.Router()
 const Wine = require('../models/Wine')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const cors = require('cors')
 
 router.get('/', (req, res) => {
-  Wine.find({}).then(wines => res.render('index', { wines }))
+  Wine.find({}).then(wines => res.json(wines))
 })
 
 router.post('/', (req, res) => {
@@ -13,12 +14,13 @@ router.post('/', (req, res) => {
     .then(wine => {
       res.redirect('/')
     })
+    console.log(req.body)
 })
 
 router.get('/edit/:id', (req, res) => {
   Wine.findOne({ _id: req.params.id })
     .then(wine => {
-      res.render('edit', {wine})
+      res.json('edit', {wine})
     })
 })
 
@@ -37,12 +39,12 @@ router.put('/:id', (req, res) => {
 })
 
 router.get('/new', (req, res) => {
-  res.render('new')
+  res.json('new')
 })
 
 router.get('/:wineType/:id', (req, res) => {
   Wine.findOne({ _id: req.params.id })
-    .then(wine => res.render('show', { wine }))
+    .then(wine => res.json('show', { wine }))
 })
 
 router.get('/:wineType/:sortType?', (req, res) => {
@@ -50,7 +52,7 @@ router.get('/:wineType/:sortType?', (req, res) => {
   Wine.find({ 'color': wineType })
     .then(wines => {
       if (req.params.wineType === 'reds' || req.params.wineType === 'whites' || req.params.wineType === 'others') {
-        res.render(req.params.wineType, { wines })
+        res.json(req.params.wineType, { wines })
       } else {
         res.redirect('/')
       }
